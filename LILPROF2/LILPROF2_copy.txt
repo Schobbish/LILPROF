@@ -1,0 +1,356 @@
+Lbl 1
+ClrHome
+1→M
+1→L
+0→T
+0→R
+0→Q
+0→Y
+Output(1,3,"Little Professor 2.0")
+Output(3,3," Mode: Addition")
+Output(4,3,"Level: 1")
+Output(6,1,"Press ^ to choose level.")
+Output(7,1,"Choose mode by pressing")
+Output(8,1,"+, -, *, /, or MODE to")
+Output(9,1,"enter Infinite Mode.")
+
+Lbl 2
+0→C
+Repeat C≠0
+getKey→C
+End
+
+If C=55
+Then
+If L≥4
+Then
+1→L
+Else
+L+1→L
+End
+Output(4,10,L)
+End
+
+If C=95
+Then
+1→M
+Output(3,10,"Addition      ")
+End
+
+If C=85
+Then
+2→M
+Output(3,10,"Subtraction   ")
+End
+
+If C=75
+Then
+3→M
+Output(3,10,"Multiplication")
+End
+
+If C=65
+Then
+4→M
+Output(3,10,"Division      ")
+End
+
+If C=22
+Goto 3
+
+If C=105
+Goto 3
+Goto 2
+
+Lbl 3
+ClrHome
+Output(1,3,"Little Professor 2.0")
+
+If C=22
+Then
+1→M
+0→L
+Disp "",""
+Output(5,1,"Input the maximum number")
+Output(6,1,"of strikes. Use 5 for a")
+Output(7,1,"chance to get on the")
+Output(8,1,"leaderboards.")
+Output(9,1,"Maximum: 9")
+Input "  Strikes: ",S
+If S<1 or S>9 or fPart(S)≠0
+Goto 3
+If S=5
+Then
+ClrHome
+Output(1,3,"Little Professor 2.0")
+Disp "","",""
+Output(2,3,"Is ⌊LILHS UnArchived?")
+Output(6,1,"Enter 1 if it is. If it is")
+Output(7,1,"not, enter 0. Game will")
+Output(8,1,"run normally, but you can")
+Output(9,1,"not go on the leaderboard.")
+Input "  ",U
+If U<0 or U>1 or fPart(U)≠0
+Goto 3
+End
+Else
+Disp "",""
+Output(5,1,"Input the number of")
+Output(6,1,"problems you would like to")
+Output(7,1,"do. Choose a number")
+Output(8,1,"between 1 and 25.")
+Input "  Problems: ",P
+If P<1 or P>25 or fPart(P)≠0
+Goto 3
+End
+
+Lbl 4
+ClrHome
+Q+1→Q
+Y+1→Y
+Output(1,3,"Little Professor 2.0")
+Output(4,2,"=")
+Output(6,3,"Problems Done:")
+Output(6,18,Q-1)
+If L≠0
+Then
+iPart(log(Q))+19→O
+Output(6,O,"/")
+Output(6,O+1,P)
+Output(7,3,"Level:")
+Output(7,10,L)
+Else
+Output(7,3,"Strikes:")
+Output(7,12,T)
+Output(7,13,"/")
+Output(7,14,S)
+randInt(1,4)→M
+End
+
+If M=2
+Then
+Output(8,1,"Type your answer quickly.")
+Output(9,1,"If negative press - last.")
+Output(10,1,"Press MODE to quit.")
+Else
+Output(9,1,"Type your answer quickly.")
+Output(10,1,"Press MODE to quit.")
+End
+If M<3 and L=0
+Then
+randInt(1,Y)→A
+randInt(1,Y)→B
+End
+If M≤2 and L=1
+Then
+randInt(1,10)→A
+randInt(1,10)→B
+End
+If M≤2 and L=2
+Then
+randInt(50,100)→A
+randInt(50,100)→B
+End
+If M≤2 and L=3
+Then
+randInt(200,500)→A
+randInt(200,500)→B
+End
+If M≤2 and L=4
+Then
+randInt(500,1000)→A
+randInt(500,1000)→B
+End
+If M=3 and L=1
+Then
+randInt(1,12)→A
+randInt(1,12)→B
+End
+If M=3 and L=2
+Then
+randInt(1,25)→A
+randInt(1,25)→B
+End
+If M=3 and L=3
+Then
+randInt(10,35)→A
+randInt(10,35)→B
+End
+If M=3 and L=4
+Then
+randInt(20,45)→A
+randInt(20,45)→B
+End
+If M=3 and L=0
+Then
+randInt(1,Y)→A
+randInt(1,iPart(Y/2))→B
+End
+If M=4 and L=0
+Then
+randInt(1,iPart(Y/2))→B
+randInt(1,Y)B→A
+End
+If M=4 and L=1
+Then
+randInt(1,12)→B
+randInt(1,12)B→A
+End
+If M=4 and L=2
+Then
+randInt(1,12)→B
+randInt(10,25)B→A
+End
+If M=4 and L=3
+Then
+randInt(10,25)→B
+randInt(10,25)B→A
+End
+If M=4 and L=4
+Then
+randInt(15,30)→B
+randInt(15,30)B→A
+End
+­1→E
+
+Lbl 5
+0→C
+Repeat C≠0
+getKey→C
+End
+If C=22
+Goto 8
+If C=102
+0→E
+If C=92
+1→E
+If C=93
+2→E
+If C=94
+3→E
+If C=82
+4→E
+If C=83
+5→E
+If C=84
+6→E
+If C=72
+7→E
+If C=73
+8→E
+If C=74
+9→E
+If E=­1
+Then
+Goto 5
+Else
+Goto 6
+End
+
+Lbl 6
+Output(4,3,E)
+0→C
+0→F
+Repeat C≠0 or F>50
+F+1→F
+getKey→C
+End
+If C=22
+Goto 8
+If C=102
+E*10+0→E
+If C=92
+E*10+1→E
+If C=93
+E*10+2→E
+If C=94
+E*10+3→E
+If C=82
+E*10+4→E
+If C=83
+E*10+5→E
+If C=84
+E*10+6→E
+If C=72
+E*10+7→E
+If C=73
+E*10+8→E
+If C=74
+E*10+9→E
+If C=104
+Then
+E*­1→E
+Output(4,3," ")
+End
+If C=105
+Goto 6
+Output(4,3,E)
+If F>50
+Then
+Goto 7
+Else
+Goto 6
+End
+
+Lbl 7
+If M=1
+A+B→D
+If M=2
+A-B→D
+If M=3
+A*B→D
+If M=4
+A/B→D
+
+If D=E
+Then
+R+1→R
+Output(8,1,"                          ")
+Output(9,1,"Correct!")
+If L=0
+((A+B)/2)+X→X
+Output(10,1,"Press enter to continue.")
+Pause
+Else
+T+1→T
+Output(8,1,"Incorrect! The answer is:")
+Output(9,1,"                         ")
+Output(9,1,D)
+If L=0
+Then
+abs(Y-6)→Y
+X-((A+B)/2)→X
+End
+Output(10,1,"Press enter to continue.")
+Pause
+End
+If Q=P and L≠0
+Then
+Lbl 8
+If L=0
+Goto 9
+ClrHome
+Output(1,9,"GAME OVER")
+Output(2,3,"Correct:")
+Output(2,12,R)
+Output(3,1,"Incorrect:")
+Output(3,12,T)
+Output(4,5,"Score:")
+Output(4,12,R/P*100)
+Disp "","","","",""
+Output(5,1,"Press enter to play again!")
+Stop
+End
+If S=T and L=0
+Lbl 9
+Output(1,9,"GAME OVER")
+Output(2,1,"Problems:")
+Output(2,10,Q)
+Output(3,2,"Strikes:")
+Output(3,10,S)
+Output(4,4,"Score:")
+Output(4,10,X)
+Output(5,1,"Press enter to play again!")
+Disp "","","","",""
+Stop
+End
