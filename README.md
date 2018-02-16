@@ -11,4 +11,4 @@ You should use the [TI Connect CE](https://education.ti.com/en/products/computer
 
 ## Editing/Contributing
 
-The TI Connect CE software has its own text editor, but it's pretty sparse. I would copy the program from that editor and paste it into `LILPROF2_copy.txt` to edit it with a different text editor. (No, you can't just edit .8xp files.) Of course, don't forget to copy/paste it back into the .8xp file! For safety, always assume the .txt file is an outdated version and copy the code from the .8xp file first. Or just use the TI Connect CE text editor. 
+The TI Connect CE software has its own text editor, but it's pretty sparse. I would copy the program from that editor and paste it into `LILPROF2_copy.txt` to edit it with a different text editor, then copy/paste it back when finished. (You can't directly edit .8xp files.) For safety, always assume the .txt file is an outdated version and copy the code from the .8xp file first. Or just use the TI Connect CE text editor. 
