@@ -1,5 +1,5 @@
 # LILPROF
-**`LILPROF2.8xp` is not stable. `original/LILPROF.8xp` probably is stable.**
+**`LILPROF2.8xp` is not stable. `original/LILPROF.8xp` is probably stable.**
 
 This is a TI-83 Plus/TI-84 program that is based on the Little Professor backwards calculator that Texas Instruments made a long time ago. It is made for the TI-84 Plus C Silver Edition. It probably also works on the TI-84 CE, but this has not been tested.
 
@@ -7,7 +7,14 @@ This is a TI-83 Plus/TI-84 program that is based on the Little Professor backwar
 
 ## Installation
 
-You should use the [TI Connect CE](https://education.ti.com/en/products/computer-software/ti-connect-sw) software provided by TI to send the program to your calculator. More on this coming soon.
+You should use the [TI Connect CE](https://education.ti.com/en/products/computer-software/ti-connect-sw) software provided by TI to send the program to your calculator.
+
+### How to send .8xp to your calculator using TI Connect CE
+
+1. Connect your calculator to your computer. I've found that it's kind of finicky but just play with it until it works.
+2. Go to Program Editor and open the file.
+3. Go to Actions > Send to Calculators.
+4. Click Send.
 
 ## Editing/Contributing
 
