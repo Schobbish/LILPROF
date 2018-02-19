@@ -20,10 +20,4 @@ You should use the [TI Connect CE](https://education.ti.com/en/products/computer
 
 The TI Connect CE software has its own text editor, but it's pretty sparse. I would copy the code from that editor and paste it into `LILPROF2_copy.txt` to edit it with a different text editor, then copy/paste it back when finished. (You can't directly edit .8xp files.) For safety, always assume the .txt file is an outdated version and copy the code from the .8xp file first. Never leave your changes in the .txt file. Or just use the TI Connect CE text editor.
 
-<<<<<<< HEAD
 **Please note that hyphens in pasted code will be interpreted as a minus sign by the TI text editor.** See [this wiki page](https://github.com/Schobbish/LILPROF/wiki/Negative-signs) for more information.
-=======
-**Please note that hyphens in pasted code will be interpreted as a minus sign by the TI text editor.**
-
-See [this wiki page](https://github.com/Schobbish/LILPROF/wiki/Negative-signs) for more information.
->>>>>>> 454ea58328ea2717b7c31fc5726b3568d1c74e6d
