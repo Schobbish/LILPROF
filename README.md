@@ -11,10 +11,11 @@ You should use the [TI Connect CE](https://education.ti.com/en/products/computer
 
 ### How to send .8xp to your calculator using TI Connect CE
 
-1. Connect your calculator to your computer. I've found that it's kind of finicky but just play with it until it works.
-2. Go to Program Editor and open the file.
-3. Go to Actions > Send to Calculators.
-4. Click Send.
+1. [Download](https://github.com/Schobbish/LILPROF/releases/download/v1.0/LILPROF.8xp) the program
+2. Connect your calculator to your computer. I've found that it's kind of finicky but just play with it until it works.
+3. Go to Program Editor and open the file.
+4. Go to Actions > Send to Calculators.
+5. Click Send.
 
 ## Editing/Contributing
 
